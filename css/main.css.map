@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "mappings": "AASA,OAAO,CAAC,oGAAI;AGTZ,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACzB;;AAED,AAAA,IAAI,EAAC,IAAI,CAAA;EACL,WAAW,EAAE,wBAAwB;CAIxC;;AALD,AAEI,IAFA,CAEA,CAAC,EAFA,IAAI,CAEL,CAAC,CAAA;EACG,eAAe,EAAE,IAAI;CACxB;;AIVL,AAAA,YAAY,CAAA;EACR,SAAS,EAAE,MAAM;EACjB,MAAM,EAAE,IAAI;CAkBf;;AApBD,AAGI,YAHQ,CAGR,UAAU,CAAA;EACN,KAAK,EAAE,IAAI;CACd;;AALL,AAMI,YANQ,CAMR,aAAa,CAAA;EACT,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;CACZ;;AATL,AAUI,YAVQ,CAUR,SAAS,CAAA;ENTT,KAAK,ECCK,OAAO;EDAjB,SAAS,ECOL,IAAI;EDNR,WAAW,ECgBP,GAAG;EDbP,OAAO,EMMS,CAAC,CLgBb,IAAI,CKhBgB,CAAC,CAAC,CAAC;CAC1B;;AAbL,AAcI,YAdQ,CAcR,OAAO,CAAA;EACH,OAAO,EAAE,CAAC;CACb;;AAhBL,AAiBI,YAjBQ,CAiBR,gBAAgB,CAAA;EACZ,OAAO,EAAE,CAAC;CACb",
+    "sources": [
+        "../main.scss",
+        "../sass/Helper/_mixin.scss",
+        "../sass/Helper/_variable.scss",
+        "../sass/Base/_reset.scss",
+        "../sass/Component/_button.scss",
+        "../sass/Component/_card.scss",
+        "../sass/Layouts/_footer.scss",
+        "../sass/Layouts/_header.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
