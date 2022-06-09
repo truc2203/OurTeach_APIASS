@@ -3,6 +3,26 @@
     font-size: $txtFs;
     font-weight: $txtFw;
 }
+@mixin txtHover($hvColor) {
+    color: $hvColor;
+    transition: all 0.2s ;
+}
 @mixin pd($pd1,$pd2,$pd3,$pd4) {
     padding : $pd1 $pd2 $pd3 $pd4
+}
+@mixin  mg($mg1,$mg2,$mg3,$mg4) {
+    margin:  $mg1 $mg2 $mg3 $mg4;
+}
+
+//Button
+@mixin  btnPri($pd1,$pd2,$bg-color,$bd-radius) {
+    padding: $pd1 $pd2;
+    box-shadow: 0 0 0 48px $color-pri inset;
+    border-radius: $bd-radius;
+    transition: all 0.3s ease;
+}
+@mixin btnHover($txtColor,$hvColor,$bg-color) {
+    color: $txtColor;
+    box-shadow: 0 0 0 1px $color-pri inset;
+    transition: all 0.3s ease;
 }

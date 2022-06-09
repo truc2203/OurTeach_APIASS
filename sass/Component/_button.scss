@@ -1,0 +1,6 @@
+.btn-primary{
+    @include btnPri($pd-btn-1,$pd-btn-2,$color-pri,$pd-btn-2);
+    &:hover{
+        @include btnHover($color-pri,$color-pri,$color-white)
+    }
+}

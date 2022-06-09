@@ -1,21 +1,76 @@
+.mainHeader{
+    height: 5000px;
+}
+.bg-header-wave{
+    top: 0;
+    & img{
+        width: 100%;
+
+    }
+}
+.bg-header-wavy{
+    top: -50px;
+    right: 90px;
+}
 .headerInner{
     max-width: 1200px;
     margin: auto;
+    position: sticky;
+    top: 0;
+    z-index: 999;
     .main-logo{
         width: 80px;
     }
     .navbar-brand{
-        padding: 0;
-        margin: 0;
+        padding: 0;//Repace Bs5
+        margin: 0; //Repalce Bs5
     }
     .nav-link{
         @include txtStyle($color-dark,$fs-1,$fw-2);
-        @include pd(0,$pd-6,0,0);
+        &:hover{
+            @include txtHover($color-pri)
+        }
+        &::after{
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: red;
+        }
     }
     .navbar{
-        padding: 0;
+        padding: 0; //Replace Bs5
+        z-index: 999;
     }
     .container-fluid{
-        padding: 0;
+        padding: 0; //Replace Bs5
+    }
+    .iconBar{
+        a{
+            @include txtStyle($color-dark,$fs-8,$fw-2);
+            @include pd(0,$pd-1,0,0);
+            &:hover{
+                @include txtHover($color-pri)
+            }
+            &:last-child{
+                padding-right: 0;
+            }
+        }
+
+        .phone-icon{
+            @include txtStyle($color-white,$fs-1,$fw-2)
+        }
     }
 }
+
+@media screen and (min-width: 992px)
+{
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    @include pd(0,$pd-6,0,0);
+
+}
+}
+
+
+
