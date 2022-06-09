@@ -1,5 +1,10 @@
-.mainHeader{
-    height: 5000px;
+.sticky{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: $color-white;
+    padding: $pd-7;
+    box-shadow: 0 3px 6px 0 #0000000d;
 }
 .bg-header-wave{
     top: 0;
@@ -13,11 +18,11 @@
     right: 90px;
 }
 .headerInner{
-    max-width: 1200px;
-    margin: auto;
-    position: sticky;
-    top: 0;
-    z-index: 999;
+    width: 100%;
+    .header-bg{
+        max-width: 1200px;
+        margin: auto;
+    }
     .main-logo{
         width: 80px;
     }
