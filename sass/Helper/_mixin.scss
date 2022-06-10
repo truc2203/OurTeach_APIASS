@@ -1,3 +1,4 @@
+//Text style
 @mixin txtStyle($txtColor,$txtFs,$txtFw) {
     color: $txtColor;
     font-size: $txtFs;
@@ -8,6 +9,8 @@
     cursor: pointer;
     transition: all 0.3s ;
 }
+
+//Padding & Margin
 @mixin pd($pd1,$pd2,$pd3,$pd4) {
     padding : $pd1 $pd2 $pd3 $pd4
 }
@@ -15,7 +18,7 @@
     margin:  $mg1 $mg2 $mg3 $mg4;
 }
 
-//Button
+//Button style
 @mixin  btnPri($pd1,$pd2,$bg-color,$bd-radius) {
     padding: $pd1 $pd2;
     box-shadow: 0 0 0 48px $color-pri inset;
@@ -27,6 +30,8 @@
     box-shadow: 0 0 0 1px $color-pri inset;
     transition: all 0.3s ease;
 }
+
+//Dropdown Navbar
 @mixin showMenuNavbar($bg-color) {
     display: none !important;
      background-color: $bg-color;

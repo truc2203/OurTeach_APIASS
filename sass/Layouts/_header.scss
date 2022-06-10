@@ -47,7 +47,7 @@
         border-bottom: 2px solid !important; //Replace Bs5
         border-color: $color-pri !important; //Replace Bs5
       }
-      .txt-color-pri{
+      .txt-color-pri {
         color: $color-pri;
       }
       p {
@@ -103,7 +103,7 @@
     @include showMenuNavbar($color-white);
     width: 220px;
     transform: translateX(0);
-    right:0;
+    right: 0;
     top: 200%;
     &::after {
       @include showMenuAfter($fs-0, $fs-0, $color-white);
