@@ -46,7 +46,7 @@
     height: $fs-0;
     background-color: $color-pri;
     border-radius: 50%;
-    animation: showMenu 0.5s ease-in;
+    animation: showList 0.5s ease-in;
 }
 @mixin showMenuBefore {
     content: "";

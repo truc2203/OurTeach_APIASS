@@ -6,7 +6,7 @@
   top: 0;
   z-index: 999;
   background-color: $color-white;
-  padding: $pd-7;
+  padding: $pd-8;
   box-shadow: 0 3px 6px 0 #0000000d;
 }
 .bg-header-wave {
@@ -39,6 +39,9 @@
     &:hover .show-menu-element {
       display: flex !important;
     }
+    &:hover .show-menu-blog {
+      display: block;
+    }
     .col-4,
     .col-12 {
       font-size: $fs-0;
@@ -58,6 +61,31 @@
         }
       }
     }
+    // Repalce BS5 Dropdown
+    .dropdown-toggle::after {
+      display: none;
+    }
+    .show-menu-blog {
+      position: absolute;
+      width: 220px;
+      background-color: $color-white;
+      box-shadow: 0 0px 6px 3px #0000000d;
+      transform: translateX(-50%);
+      animation: showMenu 0.5s ease-in;
+      top: 160%;
+      left: 128%;
+      &::after {
+        @include showMenuAfter($fs-0, $fs-0, $color-white);
+        left: 7%;
+        top: -1%;
+      }
+      &::before {
+        @include showMenuBefore;
+        top: -10%;
+        left: -6%;
+      }
+    }
+    // End replace Bs5
   }
   .nav-link {
     @include txtStyle($color-dark, $fs-1, $fw-2);
@@ -69,7 +97,7 @@
     @include showMenuNavbar($color-white);
     width: 750px;
     left: 50%;
-    top: 200%;
+    top: 160%;
     transform: translateX(-50%);
     &::after {
       @include showMenuAfter($fs-0, $fs-0, $color-white);
@@ -87,7 +115,7 @@
     width: 220px;
     transform: translateX(0);
     left: 0;
-    top: 200%;
+    top: 160%;
     &::after {
       @include showMenuAfter($fs-0, $fs-0, $color-white);
       left: 7%;
@@ -98,53 +126,20 @@
       top: -10%;
       left: -6%;
     }
-    .blog-singlepost-hv{
-      width: 6px;
-      height: 6px;
-      background: $color-pri;
-      border-radius: 50%;
-      position: absolute;
-      top: 20%;
-      right: 0;
-    }
-    .show-submenu-post::before{
-      @include showMenuBefore;
-      top: -40%;
-      right: -60%;
-      width: 150px;
-      height: 50px;
-    }
-    .show-submenu-gallery::before{
-      @include showMenuBefore;
-      top: -90%;
-      right: -60%;
-      width: 150px;
-      height: 50px;
-    }
-    .show-submenu-post:hover .submenu-post{
-      display: block;
-    }
-    .show-submenu-gallery:hover .submenu-gallery{
-      display: block;
-    }
-    .submenu-post{
-      background-color: $color-white;
-      top: -50%;
-      left: 108%;
-      width: 220px;
-      box-shadow: 0 0px 6px 3px #0000000d;
-      display: none;
-      animation: showMenu 0.5s ease-in;
-      z-index: 10;
-    }
-    .submenu-gallery{
-      background-color: $color-white;
-      top: -90%;
-      left: 108%;
-      width: 220px;
-      box-shadow: 0 0px 6px 3px #0000000d;
-      display: none;
-      animation: showMenu 0.5s ease-in;
+  }
+  .dropdown-menu {
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    & .dropdown-item {
+      font-size: $fs-0;
+      font-weight: $fw-2;
+      padding: 0 0 $pd-1 0;
+      margin: 0 0 $mg-2 0;
+      &:hover {
+        color: $color-pri;
+        background-color: $color-white;
+      }
     }
   }
   .show-menu-shop {
@@ -152,7 +147,7 @@
     width: 220px;
     transform: translateX(0);
     right: 0;
-    top: 200%;
+    top: 160%;
     &::after {
       @include showMenuAfter($fs-0, $fs-0, $color-white);
       right: 27%;
@@ -168,7 +163,7 @@
     @include showMenuNavbar($color-white);
     width: 750px;
     left: 0%;
-    top: 200%;
+    top: 160%;
     transform: translateX(-50%);
     &::after {
       @include showMenuAfter($fs-0, $fs-0, $color-white);
@@ -212,6 +207,46 @@
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 0;
     padding-left: 0;
-    @include pd(0, $pd-6, 0, 0);
+    @include pd($pd-8, $pd-6, $pd-8, 0);
   }
 }
+
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+  .dropdown-menu li {
+    position: relative;
+  }
+  .nav-item .submenu {
+    display: none;
+    position: absolute;
+    left: 108%;
+    top: -15px;
+    box-shadow: 0 3px 6px 0 #0000000d;
+    animation: showMenu 0.5s ease-in;
+    &::before {
+      content: "";
+      @include showMenuBefore;
+      right: 80%;
+      top: 0;
+    }
+  }
+  .nav-item .submenu-left {
+    right: 100%;
+    left: auto;
+  }
+
+  .dropdown-menu > li:hover > .submenu {
+    display: block;
+  }
+}
+/* ============ desktop view .end// ============ */
+
+/* ============ small devices ============ */
+@media (max-width: 991px) {
+  .dropdown-menu .dropdown-menu {
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    margin-bottom: 0.5rem;
+  }
+}
+/* ============ small devices .end// ============ */

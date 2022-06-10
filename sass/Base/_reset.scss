@@ -7,8 +7,16 @@
 html,body{
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
-    a,p{
+    a{
         text-decoration: none;
         color: $color-dark;
+        padding: 0;
+        margin: 0;
+    }
+    p{
+        color: $color-dark;
+    }
+    li{
+        list-style: none;
     }
 }

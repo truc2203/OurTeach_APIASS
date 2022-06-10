@@ -146,54 +146,33 @@
                       </div>
                     </div>
                   </li>
-                  <li class="nav-item position-relative">
-                    <a class="nav-link " href="#">Blog</a>
-                    <div class="show-menu-about d-flex position-absolute py-3">
-                      <div class="col-12 px-3">
-                        <a href="">
-                          <p class="border-bottom ">Standard view</p>
-                        </a>
-                        <a href="">
-                          <p class="border-bottom">Columns view</p>
-                        </a>
-                        <a href="">
-                          <p class="border-bottom ">Simple view</p>
-                        </a>
-                        <a href="">
-                          <p class="border-bottom">Grid view</p>
-                        </a>
-                        <a class="position-relative show-submenu-post" href="">
-                          <p class="border-bottom">Signle Post</p>
-                          <div class="blog-singlepost-hv">
-
-                          </div>
-                          <div class="submenu-post position-absolute py-3">
-                            <div class="col-12 px-3">
-                              <p class="border-bottom ">Course</p>
-                              <p class="border-bottom">Signle Course</p>
-                              <p class="border-bottom ">Schedule</p>
-                              <p class="border-bottom">Workshop</p>
-                              <p class="border-bottom">Workshop & Event</p>
-                              <p class="m-0 p-0">Get Quote</p>
-                            </div>
-                          </div>
-                        </a>
-                        <a class="position-relative show-submenu-gallery" href="">
-                          <p class=" m-0 p-0">Galleries</p>
-                          <div class="blog-singlepost-hv">
-                          </div>
-                          <div class="submenu-gallery position-absolute py-3">
-                            <div class="col-12 px-3">
-                              <p class="border-bottom ">Standard Post</p>
-                              <p class="border-bottom">Gallery Post</p>
-                              <p class="border-bottom ">Grid Gallery</p>
-                              <p class="border-bottom">Video Post</p>
-                              <p class="m-0 p-0">Audio Post</p>
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
+                  <li class="nav-item dropdown" id="myDropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Blog  </a>
+                    <ul class="dropdown-menu show-menu-blog p-3">
+                      <li> <a class="dropdown-item border-bottom" href="#">Standard view</a></li>
+                      <li> <a class="dropdown-item border-bottom" href="#">Columns view</a></li>
+                      <li> <a class="dropdown-item border-bottom" href="#">Signle view</a></li>
+                      <li> <a class="dropdown-item border-bottom" href="#">Grid view</a></li>
+                      <li> <a class="dropdown-item border-bottom" href="#">Signle Post </a>
+                        <ul class="submenu dropdown-menu p-3">
+                          <li><a class="dropdown-item border-bottom" href="#">Srandard Post</a></li>
+                          <li><a class="dropdown-item border-bottom" href="#">Grid Gallery Post</a></li>
+                          <li><a class="dropdown-item border-bottom" href="#">Carousel & Column Post</a></li>
+                          <li><a class="dropdown-item border-bottom" href="#">Quote Post</a></li>
+                          <li><a class="dropdown-item border-bottom" href="#">Link Post</a> </li>                                                 
+                          <li><a class="dropdown-item border-bottom" href="#">Audio Post</a></li>
+                          <li><a class="dropdown-item m-0 p-0" href="#">Video Post</a></li>
+                        </ul>
+                      </li><li> <a class="dropdown-item m-0 p-0" href="#">Galleries  </a>
+                        <ul class="submenu dropdown-menu p-3">
+                          <li><a class="dropdown-item border-bottom" href="#">Standard Post</a></li>
+                          <li><a class="dropdown-item border-bottom" href="#">Carousel Post</a></li>
+                          <li><a class="dropdown-item border-bottom" href="#">Grid Gallery</a></li>
+                          <li><a class="dropdown-item border-bottom" href="#">Video Post</a></li>
+                          <li><a class="dropdown-item m-0 p-0" href="#">Audio Post</a> </li>                                                 
+                        </ul>
+                      </li>                   
+                    </ul>
                   </li>
                   <li class="nav-item position-relative">
                     <a class="nav-link " href="#">Shop</a>
@@ -329,6 +308,7 @@
     integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
     crossorigin="anonymous"></script>
   <script src="./Js/WindowScroll.js"></script>
+  <script src="./Js/DropdownMenu.js"></script>
 </body>
 
 </html>
