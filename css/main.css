@@ -146,7 +146,7 @@ html a, body a {
 
 .headerInner .nav-item .col-4 p,
 .headerInner .nav-item .col-12 p {
-  padding-bottom: 8px;
+  padding-bottom: 12px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -249,6 +249,30 @@ html a, body a {
   left: -6%;
 }
 
+.headerInner .show-menu-about .blog-singlepost-hv {
+  width: 6px;
+  height: 6px;
+  background: #b61984;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  right: 0;
+}
+
+.headerInner .show-menu-about .show-submenu-post:hover .submenu-post {
+  display: block;
+}
+
+.headerInner .show-menu-about .submenu-post {
+  background-color: #ffffff;
+  top: 66%;
+  left: 100%;
+  width: 220px;
+  -webkit-box-shadow: 0 0px 6px 3px #0000000d;
+          box-shadow: 0 0px 6px 3px #0000000d;
+  display: block;
+}
+
 .headerInner .show-menu-shop {
   display: none !important;
   background-color: #ffffff;
@@ -340,12 +364,15 @@ html a, body a {
   font-size: 14px;
   font-weight: 600;
   padding: 0 12px 0 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .headerInner .iconBar a:hover {
   color: #b61984;
   cursor: pointer;
   -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   transition: all 0.3s;
 }
 

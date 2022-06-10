@@ -51,7 +51,7 @@
         color: $color-pri;
       }
       p {
-        padding-bottom: $pd-8;
+        padding-bottom: $pd-1;
         transition: all 0.2s;
         &:hover {
           @include txtHover($color-pri);
@@ -97,6 +97,26 @@
       @include showMenuBefore;
       top: -10%;
       left: -6%;
+    }
+    .blog-singlepost-hv{
+      width: 6px;
+      height: 6px;
+      background: $color-pri;
+      border-radius: 50%;
+      position: absolute;
+      top: 20%;
+      right: 0;
+    }
+    .show-submenu-post:hover .submenu-post{
+      display: block;
+    }
+    .submenu-post{
+      background-color: $color-white;
+      top: 66%;
+      left: 100%;
+      width: 220px;
+      box-shadow: 0 0px 6px 3px #0000000d;
+      display: block;
     }
   }
   .show-menu-shop {
@@ -144,8 +164,10 @@
     a {
       @include txtStyle($color-dark, $fs-8, $fw-2);
       @include pd(0, $pd-1, 0, 0);
+      transition: all 0.3s;
       &:hover {
         @include txtHover($color-pri);
+        transition: all 0.3s;
       }
       &:last-child {
         padding-right: 0;
