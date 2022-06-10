@@ -5,7 +5,8 @@
 }
 @mixin txtHover($hvColor) {
     color: $hvColor;
-    transition: all 0.2s ;
+    cursor: pointer;
+    transition: all 0.3s ;
 }
 @mixin pd($pd1,$pd2,$pd3,$pd4) {
     padding : $pd1 $pd2 $pd3 $pd4
@@ -25,4 +26,27 @@
     color: $txtColor;
     box-shadow: 0 0 0 1px $color-pri inset;
     transition: all 0.3s ease;
+}
+@mixin showMenuNavbar($bg-color) {
+    display: none !important;
+     background-color: $bg-color;
+    box-shadow: 0 0px 6px 3px #0000000d;
+    transform: translateX(-50%);
+    animation: showMenu 0.5s ease-in;
+}
+@mixin showMenuAfter($fs-w, $fs-h,$bg-color) {
+    content: "";
+    position: absolute;
+    width: $fs-0;
+    height: $fs-0;
+    background-color: $color-pri;
+    border-radius: 50%;
+    animation: showMenu 0.5s ease-in;
+}
+@mixin showMenuBefore {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    background-color: transparent;
 }

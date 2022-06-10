@@ -1,4 +1,4 @@
-.mainHeader{
+.mainHeader {
   height: 5000px;
 }
 .sticky {
@@ -33,8 +33,30 @@
     margin: 0; //Repalce Bs5
   }
   .nav-item {
-    &:hover .show-menu-home {
+    &:hover .show-menu-home,
+    &:hover .show-menu-about,
+    &:hover .show-menu-shop,
+    &:hover .show-menu-element {
       display: flex !important;
+    }
+    .col-4,
+    .col-12 {
+      font-size: $fs-0;
+      font-weight: $fw-2;
+      .bd-color-pri {
+        border-bottom: 2px solid !important; //Replace Bs5
+        border-color: $color-pri !important; //Replace Bs5
+      }
+      .txt-color-pri{
+        color: $color-pri;
+      }
+      p {
+        padding-bottom: $pd-8;
+        transition: all 0.2s;
+        &:hover {
+          @include txtHover($color-pri);
+        }
+      }
     }
   }
   .nav-link {
@@ -44,39 +66,73 @@
     }
   }
   .show-menu-home {
-    display: none !important;
-    width: 800px;
-    background-color: $color-white;
-    box-shadow: 0 0px 6px 3px #0000000d;
-    transform: translateX(-50%);
+    @include showMenuNavbar($color-white);
+    width: 750px;
     left: 50%;
     top: 200%;
-    animation: showMenu 0.5s ease-in;
-    .col-4 {
-      font-size: $fs-0;
-      font-weight: $fw-2;
-      .bd-color-pri {
-        border-bottom: 2px solid !important; //Replace Bs5
-        border-color: $color-pri !important; //Replace Bs5
-      }
-      p {
-        padding-bottom: $pd-8;
-      }
+    transform: translateX(-50%);
+    &::after {
+      @include showMenuAfter($fs-0, $fs-0, $color-white);
+      left: 46%;
+      top: -2%;
     }
-    &::after{
-        content: "";
-        position: absolute;
-        width: $fs-0;
-        height: $fs-0;
-        background-color: $color-pri;
-        border-radius: 50%;
-        left: 47%;
-        top: -2%;
-        transform: translateX(-50%);
-        animation: showMenu 0.5s ease-in;
+    &::before {
+      @include showMenuBefore;
+      top: -10%;
+      left: 42%;
     }
   }
-
+  .show-menu-about {
+    @include showMenuNavbar($color-white);
+    width: 220px;
+    transform: translateX(0);
+    left: 0;
+    top: 200%;
+    &::after {
+      @include showMenuAfter($fs-0, $fs-0, $color-white);
+      left: 7%;
+      top: -2%;
+    }
+    &::before {
+      @include showMenuBefore;
+      top: -10%;
+      left: -6%;
+    }
+  }
+  .show-menu-shop {
+    @include showMenuNavbar($color-white);
+    width: 220px;
+    transform: translateX(0);
+    right:0;
+    top: 200%;
+    &::after {
+      @include showMenuAfter($fs-0, $fs-0, $color-white);
+      right: 27%;
+      top: -2%;
+    }
+    &::before {
+      @include showMenuBefore;
+      top: -10%;
+      right: 12%;
+    }
+  }
+  .show-menu-element {
+    @include showMenuNavbar($color-white);
+    width: 750px;
+    left: 0%;
+    top: 200%;
+    transform: translateX(-50%);
+    &::after {
+      @include showMenuAfter($fs-0, $fs-0, $color-white);
+      left: 53%;
+      top: -2%;
+    }
+    &::before {
+      @include showMenuBefore;
+      top: -10%;
+      left: 48%;
+    }
+  }
   .navbar {
     padding: 0; //Replace Bs5
     z-index: 999;

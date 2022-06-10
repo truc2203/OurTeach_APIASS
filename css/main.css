@@ -52,6 +52,7 @@ html, body {
 
 html a, body a {
   text-decoration: none;
+  color: #181818;
 }
 
 .btn-primary {
@@ -117,10 +118,45 @@ html a, body a {
   margin: 0;
 }
 
-.headerInner .nav-item:hover .show-menu-home {
+.headerInner .nav-item:hover .show-menu-home,
+.headerInner .nav-item:hover .show-menu-about,
+.headerInner .nav-item:hover .show-menu-shop,
+.headerInner .nav-item:hover .show-menu-element {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
+}
+
+.headerInner .nav-item .col-4,
+.headerInner .nav-item .col-12 {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.headerInner .nav-item .col-4 .bd-color-pri,
+.headerInner .nav-item .col-12 .bd-color-pri {
+  border-bottom: 2px solid !important;
+  border-color: #b61984 !important;
+}
+
+.headerInner .nav-item .col-4 .txt-color-pri,
+.headerInner .nav-item .col-12 .txt-color-pri {
+  color: #b61984;
+}
+
+.headerInner .nav-item .col-4 p,
+.headerInner .nav-item .col-12 p {
+  padding-bottom: 8px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.headerInner .nav-item .col-4 p:hover,
+.headerInner .nav-item .col-12 p:hover {
+  color: #b61984;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .headerInner .nav-link {
@@ -131,36 +167,24 @@ html a, body a {
 
 .headerInner .nav-link:hover {
   color: #b61984;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .headerInner .show-menu-home {
   display: none !important;
-  width: 800px;
   background-color: #ffffff;
   -webkit-box-shadow: 0 0px 6px 3px #0000000d;
           box-shadow: 0 0px 6px 3px #0000000d;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  left: 50%;
-  top: 200%;
   -webkit-animation: showMenu 0.5s ease-in;
           animation: showMenu 0.5s ease-in;
-}
-
-.headerInner .show-menu-home .col-4 {
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.headerInner .show-menu-home .col-4 .bd-color-pri {
-  border-bottom: 2px solid !important;
-  border-color: #b61984 !important;
-}
-
-.headerInner .show-menu-home .col-4 p {
-  padding-bottom: 8px;
+  width: 750px;
+  left: 50%;
+  top: 200%;
+  transform: translateX(-50%);
 }
 
 .headerInner .show-menu-home::after {
@@ -170,12 +194,136 @@ html a, body a {
   height: 12px;
   background-color: #b61984;
   border-radius: 50%;
-  left: 47%;
+  -webkit-animation: showMenu 0.5s ease-in;
+          animation: showMenu 0.5s ease-in;
+  left: 46%;
   top: -2%;
+}
+
+.headerInner .show-menu-home::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  background-color: transparent;
+  top: -10%;
+  left: 42%;
+}
+
+.headerInner .show-menu-about {
+  display: none !important;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0px 6px 3px #0000000d;
+          box-shadow: 0 0px 6px 3px #0000000d;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   -webkit-animation: showMenu 0.5s ease-in;
           animation: showMenu 0.5s ease-in;
+  width: 220px;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  left: 0;
+  top: 200%;
+}
+
+.headerInner .show-menu-about::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #b61984;
+  border-radius: 50%;
+  -webkit-animation: showMenu 0.5s ease-in;
+          animation: showMenu 0.5s ease-in;
+  left: 7%;
+  top: -2%;
+}
+
+.headerInner .show-menu-about::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  background-color: transparent;
+  top: -10%;
+  left: -6%;
+}
+
+.headerInner .show-menu-shop {
+  display: none !important;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0px 6px 3px #0000000d;
+          box-shadow: 0 0px 6px 3px #0000000d;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation: showMenu 0.5s ease-in;
+          animation: showMenu 0.5s ease-in;
+  width: 220px;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  right: 0;
+  top: 200%;
+}
+
+.headerInner .show-menu-shop::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #b61984;
+  border-radius: 50%;
+  -webkit-animation: showMenu 0.5s ease-in;
+          animation: showMenu 0.5s ease-in;
+  right: 27%;
+  top: -2%;
+}
+
+.headerInner .show-menu-shop::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  background-color: transparent;
+  top: -10%;
+  right: 12%;
+}
+
+.headerInner .show-menu-element {
+  display: none !important;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0px 6px 3px #0000000d;
+          box-shadow: 0 0px 6px 3px #0000000d;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation: showMenu 0.5s ease-in;
+          animation: showMenu 0.5s ease-in;
+  width: 750px;
+  left: 0%;
+  top: 200%;
+  transform: translateX(-50%);
+}
+
+.headerInner .show-menu-element::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #b61984;
+  border-radius: 50%;
+  -webkit-animation: showMenu 0.5s ease-in;
+          animation: showMenu 0.5s ease-in;
+  left: 53%;
+  top: -2%;
+}
+
+.headerInner .show-menu-element::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  background-color: transparent;
+  top: -10%;
+  left: 48%;
 }
 
 .headerInner .navbar {
@@ -196,8 +344,9 @@ html a, body a {
 
 .headerInner .iconBar a:hover {
   color: #b61984;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .headerInner .iconBar a:last-child {
