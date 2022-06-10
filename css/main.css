@@ -266,7 +266,9 @@ html a, html p, body a, body p {
   height: 40px;
   background-color: transparent;
   top: -40%;
-  right: -30%;
+  right: -60%;
+  width: 150px;
+  height: 50px;
 }
 
 .headerInner .show-menu-about .show-submenu-gallery::before {
@@ -275,8 +277,10 @@ html a, html p, body a, body p {
   width: 80px;
   height: 40px;
   background-color: transparent;
-  top: -40%;
-  right: -30%;
+  top: -90%;
+  right: -60%;
+  width: 150px;
+  height: 50px;
 }
 
 .headerInner .show-menu-about .show-submenu-post:hover .submenu-post {
@@ -297,6 +301,7 @@ html a, html p, body a, body p {
   display: none;
   -webkit-animation: showMenu 0.5s ease-in;
           animation: showMenu 0.5s ease-in;
+  z-index: 10;
 }
 
 .headerInner .show-menu-about .submenu-gallery {

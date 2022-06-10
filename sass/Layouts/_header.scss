@@ -110,12 +110,16 @@
     .show-submenu-post::before{
       @include showMenuBefore;
       top: -40%;
-      right: -30%;
+      right: -60%;
+      width: 150px;
+      height: 50px;
     }
     .show-submenu-gallery::before{
       @include showMenuBefore;
-      top: -40%;
-      right: -30%;
+      top: -90%;
+      right: -60%;
+      width: 150px;
+      height: 50px;
     }
     .show-submenu-post:hover .submenu-post{
       display: block;
@@ -131,6 +135,7 @@
       box-shadow: 0 0px 6px 3px #0000000d;
       display: none;
       animation: showMenu 0.5s ease-in;
+      z-index: 10;
     }
     .submenu-gallery{
       background-color: $color-white;
