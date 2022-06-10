@@ -107,16 +107,39 @@
       top: 20%;
       right: 0;
     }
+    .show-submenu-post::before{
+      @include showMenuBefore;
+      top: -40%;
+      right: -30%;
+    }
+    .show-submenu-gallery::before{
+      @include showMenuBefore;
+      top: -40%;
+      right: -30%;
+    }
     .show-submenu-post:hover .submenu-post{
+      display: block;
+    }
+    .show-submenu-gallery:hover .submenu-gallery{
       display: block;
     }
     .submenu-post{
       background-color: $color-white;
-      top: 66%;
-      left: 100%;
+      top: -50%;
+      left: 108%;
       width: 220px;
       box-shadow: 0 0px 6px 3px #0000000d;
-      display: block;
+      display: none;
+      animation: showMenu 0.5s ease-in;
+    }
+    .submenu-gallery{
+      background-color: $color-white;
+      top: -90%;
+      left: 108%;
+      width: 220px;
+      box-shadow: 0 0px 6px 3px #0000000d;
+      display: none;
+      animation: showMenu 0.5s ease-in;
     }
   }
   .show-menu-shop {

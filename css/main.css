@@ -50,7 +50,7 @@ html, body {
   scroll-behavior: smooth;
 }
 
-html a, body a {
+html a, html p, body a, body p {
   text-decoration: none;
   color: #181818;
 }
@@ -259,18 +259,56 @@ html a, body a {
   right: 0;
 }
 
+.headerInner .show-menu-about .show-submenu-post::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  background-color: transparent;
+  top: -40%;
+  right: -30%;
+}
+
+.headerInner .show-menu-about .show-submenu-gallery::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  background-color: transparent;
+  top: -40%;
+  right: -30%;
+}
+
 .headerInner .show-menu-about .show-submenu-post:hover .submenu-post {
+  display: block;
+}
+
+.headerInner .show-menu-about .show-submenu-gallery:hover .submenu-gallery {
   display: block;
 }
 
 .headerInner .show-menu-about .submenu-post {
   background-color: #ffffff;
-  top: 66%;
-  left: 100%;
+  top: -50%;
+  left: 108%;
   width: 220px;
   -webkit-box-shadow: 0 0px 6px 3px #0000000d;
           box-shadow: 0 0px 6px 3px #0000000d;
-  display: block;
+  display: none;
+  -webkit-animation: showMenu 0.5s ease-in;
+          animation: showMenu 0.5s ease-in;
+}
+
+.headerInner .show-menu-about .submenu-gallery {
+  background-color: #ffffff;
+  top: -90%;
+  left: 108%;
+  width: 220px;
+  -webkit-box-shadow: 0 0px 6px 3px #0000000d;
+          box-shadow: 0 0px 6px 3px #0000000d;
+  display: none;
+  -webkit-animation: showMenu 0.5s ease-in;
+          animation: showMenu 0.5s ease-in;
 }
 
 .headerInner .show-menu-shop {
