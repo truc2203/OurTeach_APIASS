@@ -75,7 +75,7 @@
       box-shadow: 0 0px 6px 3px #0000000d;
       transform: translateX(-50%);
       animation: showMenu 0.3s ease-in;
-      top: 160%;
+      top: 55px;
       left: 128%;
       &::after {
         @include showMenuAfter($fs-0, $fs-0, $color-white);
@@ -100,12 +100,12 @@
     @include showMenuNavbar($color-white);
     width: 750px;
     left: 50%;
-    top: 160%;
+    top: 55px;
     transform: translateX(-50%);
     &::after {
       @include showMenuAfter($fs-0, $fs-0, $color-white);
       left: 46%;
-      top: -2%;
+      top: -5px;
     }
     &::before {
       @include showMenuBefore;
@@ -118,11 +118,11 @@
     width: 220px;
     transform: translateX(0);
     left: 0;
-    top: 160%;
+    top: 55px;
     &::after {
       @include showMenuAfter($fs-0, $fs-0, $color-white);
       left: 7%;
-      top: -2%;
+      top: -5px;
     }
     &::before {
       @include showMenuBefore;
@@ -162,11 +162,11 @@
     width: 220px;
     transform: translateX(0);
     right: 0;
-    top: 160%;
+    top: 55px;
     &::after {
       @include showMenuAfter($fs-0, $fs-0, $color-white);
       right: 27%;
-      top: -2%;
+      top: -5px;
     }
     &::before {
       @include showMenuBefore;
@@ -178,12 +178,12 @@
     @include showMenuNavbar($color-white);
     width: 750px;
     left: 0%;
-    top: 160%;
+    top: 55px;
     transform: translateX(-50%);
     &::after {
       @include showMenuAfter($fs-0, $fs-0, $color-white);
       left: 53%;
-      top: -2%;
+      top: -5px;
     }
     &::before {
       @include showMenuBefore;
