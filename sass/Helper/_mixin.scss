@@ -7,7 +7,7 @@
 @mixin txtHover($hvColor) {
     color: $hvColor;
     cursor: pointer;
-    transition: all 0.3s ;
+    @include strans;
 }
 
 //Padding & Margin
@@ -54,4 +54,9 @@
     width: 80px;
     height: 40px;
     background-color: transparent;
+}
+
+//Transition
+@mixin strans {
+    transition: all 0.2s;
 }

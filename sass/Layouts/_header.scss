@@ -1,12 +1,15 @@
-.mainHeader {
-  height: 5000px;
+//Main container
+.container {
+  padding: 0;
+  max-width: 1200px;
+  margin: auto;
 }
 .sticky {
   position: sticky;
   top: 0;
   z-index: 999;
   background-color: $color-white;
-  padding: $pd-8;
+  padding: $pd-9;
   box-shadow: 0 3px 6px 0 #0000000d;
 }
 .bg-header-wave {
@@ -15,16 +18,8 @@
     width: 100%;
   }
 }
-.bg-header-wavy {
-  top: -50px;
-  right: 90px;
-}
 .headerInner {
   width: 100%;
-  .header-bg {
-    max-width: 1200px;
-    margin: auto;
-  }
   .main-logo {
     width: 80px;
   }
@@ -55,9 +50,10 @@
       }
       p {
         padding-bottom: $pd-1;
-        transition: all 0.2s;
+        @include strans;
         &:hover {
           @include txtHover($color-pri);
+          @include strans;
         }
       }
     }
@@ -71,7 +67,7 @@
       background-color: $color-white;
       box-shadow: 0 0px 6px 3px #0000000d;
       transform: translateX(-50%);
-      animation: showMenu 0.5s ease-in;
+      animation: showMenu 0.3s ease-in;
       top: 160%;
       left: 128%;
       &::after {
@@ -136,11 +132,23 @@
       font-weight: $fw-2;
       padding: 0 0 $pd-1 0;
       margin: 0 0 $mg-2 0;
+      @include strans;
       &:hover {
         color: $color-pri;
         background-color: $color-white;
+        @include strans;
       }
     }
+  }
+  .drop-before::before{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: $color-pri;
+    top: 15%;
+    right: 10px;
+    border-radius: 50%
   }
   .show-menu-shop {
     @include showMenuNavbar($color-white);
@@ -155,7 +163,7 @@
     }
     &::before {
       @include showMenuBefore;
-      top: -10%;
+      top: -15%;
       right: 12%;
     }
   }
@@ -187,10 +195,10 @@
     a {
       @include txtStyle($color-dark, $fs-8, $fw-2);
       @include pd(0, $pd-1, 0, 0);
-      transition: all 0.3s;
+      @include strans;
       &:hover {
         @include txtHover($color-pri);
-        transition: all 0.3s;
+        @include strans;
       }
       &:last-child {
         padding-right: 0;

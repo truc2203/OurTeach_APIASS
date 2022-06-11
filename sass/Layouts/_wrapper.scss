@@ -1,0 +1,11 @@
+.wrapper{
+    & .wrap-left-content{
+        margin: 200px 0;
+        & h5{
+            @include txtStyle($color-pri,$fs-6,$fw-2)
+        }
+        & h1{
+            @include txtStyle($color-dark,$fs-5,$fw-3)
+        }
+    }
+}
