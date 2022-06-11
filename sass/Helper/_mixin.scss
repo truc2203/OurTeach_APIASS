@@ -60,3 +60,9 @@
 @mixin strans {
     transition: all 0.2s;
 }
+
+@mixin cards($color-bg,$fs-bd) {
+    background-color: $color-bg;
+    border-radius: $fs-bd;
+    overflow: hidden;
+}

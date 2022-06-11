@@ -38,6 +38,28 @@
   }
 }
 
+@-webkit-keyframes showAva {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes showAva {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -82,10 +104,73 @@ html li, body li {
   transition: all 0.3s ease;
 }
 
+.cards {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.cards .avatar {
+  overflow: hidden;
+}
+
+.cards:hover {
+  -webkit-box-shadow: 0 5px 10px 0 #8e8a8a;
+          box-shadow: 0 5px 10px 0 #8e8a8a;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.cards:hover .scale-ava {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.cards .scale-ava {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.info {
+  padding: 30px;
+}
+
+.info .country {
+  color: #b61984;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.info .name {
+  color: #181818;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  padding: 8px 0 15px 0;
+}
+
+.info .criteria {
+  color: #181818;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
 .container {
   padding: 0;
   max-width: 1200px;
   margin: auto;
+}
+
+.mainHeader {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1030;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .sticky {
@@ -496,6 +581,10 @@ html li, body li {
 }
 
 /* ============ small devices .end// ============ */
+.wrapper .wrapper-cover-top {
+  padding-bottom: 60px;
+}
+
 .wrapper .wrap-left-content {
   margin: 200px 0;
 }
@@ -510,5 +599,35 @@ html li, body li {
   color: #181818;
   font-size: 58px;
   font-weight: 700;
+}
+
+.wrapper .wrapper-wave-top-left {
+  background-image: url("../../img/Violet_top_left_wave.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  top: 62%;
+}
+
+.wrapper .wrapper-cover-bottom {
+  padding-top: 30px;
+  background-color: #dcd1f3;
+}
+
+.wrapper .wrapper-cover-bottom .col-3 {
+  z-index: 3;
+}
+
+.wrapper .wrapper-wave-bottom-right {
+  background-image: url("../../img/Wave_White_bottom_right_shape_01.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 377px;
+  position: absolute;
+  top: 415px;
+  z-index: 1;
 }
 /*# sourceMappingURL=main.css.map */

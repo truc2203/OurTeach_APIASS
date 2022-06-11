@@ -1,0 +1,32 @@
+.cards{
+    @include cards($color-white,$fs-0);
+    .avatar{
+        overflow: hidden;
+    }
+    &:hover{
+        box-shadow: 0 5px 10px 0 #8e8a8a;
+        @include strans
+    }
+    &:hover .scale-ava{
+       transform: scale(1.1);
+       transition: all 1s;
+    }
+    & .scale-ava{
+        transition: all 1s;
+    }
+}
+.info{
+    padding: $pd-10;
+    .country{
+        @include txtStyle($color-pri,$fs-9,$fw-2);
+    }
+    .name{
+        @include txtStyle($color-dark,$fs-3,$fw-3);
+        margin : 0;
+        padding: $pd-8 0 $pd-2 0;
+    }
+    .criteria {
+        @include txtStyle($color-dark,$fs-8,$fw-4);
+        margin : 0;
+    }
+}

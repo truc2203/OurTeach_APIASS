@@ -4,6 +4,13 @@
   max-width: 1200px;
   margin: auto;
 }
+.mainHeader{
+  position: sticky;
+  z-index: 1030;
+  top: 0;
+  left: 0;
+  right: 0;
+}
 .sticky {
   position: sticky;
   top: 0;
@@ -14,7 +21,7 @@
 }
 .bg-header-wave {
   top: 0;
-  & img {
+  img {
     width: 100%;
   }
 }
@@ -127,7 +134,7 @@
     border-radius: 0;
     border: none;
     padding: 0;
-    & .dropdown-item {
+    .dropdown-item {
       font-size: $fs-0;
       font-weight: $fw-2;
       padding: 0 0 $pd-1 0;
