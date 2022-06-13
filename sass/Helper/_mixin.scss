@@ -21,13 +21,14 @@
 //Button style
 @mixin  btnPri($pd1,$pd2,$bg-color,$bd-radius) {
     padding: $pd1 $pd2;
-    box-shadow: 0 0 0 48px $color-pri inset;
+    box-shadow: 0 0 0 48px $bg-color inset;
     border-radius: $bd-radius;
     transition: all 0.3s ease;
 }
 @mixin btnHover($txtColor,$hvColor,$bg-color) {
     color: $txtColor;
-    box-shadow: 0 0 0 1px $color-pri inset;
+    box-shadow: 0 0 0 1px $hvColor inset;
+    background-color: $bg-color;
     transition: all 0.3s ease;
 }
 

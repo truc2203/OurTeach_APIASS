@@ -6,7 +6,7 @@
 }
 
 .btn-primary{
-    @include btnPri(10px,50px,$color-pri,50px);
+    @include btnPri(14px,55px,$color-pri,55px);
     @include txtStyle($color-white,$fs-1,$fw-2);
     border: none;
     &:hover{
