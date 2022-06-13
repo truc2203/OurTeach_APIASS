@@ -186,8 +186,13 @@ html li, body li {
   background-color: #aa017e;
 }
 
+.footer .container {
+  padding-bottom: 60px;
+}
+
 .footer .col-3 {
   padding: 0 36px;
+  z-index: 3;
 }
 
 .footer .footer-info h4 {
@@ -196,20 +201,30 @@ html li, body li {
   font-weight: 700;
 }
 
-.footer .footer-info a, .footer .footer-info div {
+.footer .footer-info a,
+.footer .footer-info div {
   color: #ffffff;
   font-size: 13px;
   font-weight: 500;
 }
 
-.footer .footer-info a i, .footer .footer-info div i {
-  margin-right: 10px;
+.footer .footer-info a .ft-social-icon:hover,
+.footer .footer-info div .ft-social-icon:hover {
+  color: #181818;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-.footer .footer-info a:hover {
-  color: #181818;
+.footer .footer-info a .ft-menu-item:hover,
+.footer .footer-info div .ft-menu-item:hover {
+  opacity: 0.7;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.footer .footer-info a i,
+.footer .footer-info div i {
+  margin-right: 10px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -222,9 +237,9 @@ html li, body li {
   border: 1px solid #b6258f;
   background: #aa017e;
   color: #181818;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
-  padding: 15px 12px 15px 12px;
+  padding: 14px 12px 14px 12px;
   margin: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -237,7 +252,24 @@ html li, body li {
   transition: all 0.5s;
 }
 
+.footer .footer-info .input-ft::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.footer .footer-info .input-ft:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.footer .footer-info .input-ft::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.footer .footer-info .input-ft::placeholder {
+  color: #ffffff;
+}
+
 .footer .footer-info .btn-ft {
+  letter-spacing: 2px;
   padding: 14px 55px;
   -webkit-box-shadow: 0 0 0 48px #ffffff inset;
           box-shadow: 0 0 0 48px #ffffff inset;
@@ -263,6 +295,15 @@ html li, body li {
 .footer .footer-info .info-menu {
   padding: 12px 0;
   border-bottom: 1px solid #990171;
+}
+
+.footer .footer-bottom-wave {
+  bottom: 1px;
+  background-image: url("../../img/footer_background.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 510px;
 }
 
 .container {

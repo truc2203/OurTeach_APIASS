@@ -1,48 +1,68 @@
-.footer{
-    padding: 120px 0;
-    background-color: $color-bgft;
-    .col-3{
-        padding: 0 $pd-3
+.footer {
+  padding: 120px 0;
+  background-color: $color-bgft;
+  .container {
+    padding-bottom: 60px;
+  }
+  .col-3 {
+    padding: 0 $pd-3;
+    z-index: 3;
+  }
+  .footer-info {
+    h4 {
+      @include txtStyle($color-white, $fs-3, $fw-3);
     }
-    .footer-info{
-        h4{
-            @include txtStyle($color-white,$fs-3,$fw-3);
-        }
-        a,div{
-            @include txtStyle($color-white,$fs-1,$fw-4);
-            i{
-                margin-right: 10px;
-            @include strans
+    a,
+    div {
+      @include txtStyle($color-white, $fs-1, $fw-4);
+      .ft-social-icon:hover {
+        color: $color-dark;
+        @include strans;
+      }
+      .ft-menu-item:hover {
+        opacity: 0.7;
+        @include strans;
+      }
+      i {
+        margin-right: 10px;
+        @include strans;
+      }
+    }
 
-            }
-        }
-        a:hover{
-            color:$color-dark;
-            @include strans
-        }
-        .input-ft{
-            text-align: center;
-            @include inputForm($color-dark,$fs-9,$fw-4,$color-bgft,#b6258f);
-            padding: 15px 12px 15px 12px; //replace minxin
-            margin: 0;
-            transition: all 0.5s;
-            &:focus-visible{
-               @include inputFormFTFocus($color-white)
-            }
-        
+    .input-ft {
+      text-align: center;
+      @include inputForm($color-dark, $fs-1, $fw-4, $color-bgft, #b6258f);
+      padding: 14px 12px 14px 12px; //replace minxin
+      margin: 0;
+      transition: all 0.5s;
+      &:focus-visible {
+        @include inputFormFTFocus($color-white);
+      }
+      &::placeholder {
+        color: $color-white;
+      }
     }
-    .btn-ft{
-        @include btnPri(14px,55px,$color-white,55px);
-        padding: 15px 12px 15px 12px; //replace mixin
-        @include txtStyle($color-dark,$fs-1,$fw-2);
-        border: none;
-        &:hover{
-            @include btnHover($color-white,$color-white,$color-bgft)
-        }
+    .btn-ft {
+      letter-spacing: 2px;
+      @include btnPri(14px, 55px, $color-white, 55px);
+      padding: 15px 12px 15px 12px; //replace mixin
+      @include txtStyle($color-dark, $fs-1, $fw-2);
+      border: none;
+      &:hover {
+        @include btnHover($color-white, $color-white, $color-bgft);
+      }
     }
-    .info-menu{
-        padding: 12px 0  ;
-        border-bottom: 1px solid $color-bdft;
+    .info-menu {
+      padding: 12px 0;
+      border-bottom: 1px solid $color-bdft;
     }
-}
+  }
+  .footer-bottom-wave {
+    bottom: 1px;
+    background-image: url("../../img/footer_background.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 510px;
+  }
 }
