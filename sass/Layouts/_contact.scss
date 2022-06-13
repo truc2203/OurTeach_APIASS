@@ -9,7 +9,9 @@
         padding-bottom: $pd-10;
     }
     .contact-bottom-wave{
-        bottom: -1px;
+      background-image: url('../../img/accent_bottom_wave_01.png');
+      @include bgImg;
+      height: 25vw;
       }
       .col-5{
         box-shadow: 0 30px 30px -10px #00000033;

@@ -28,6 +28,12 @@
 }
 .headerInner {
   width: 100%;
+  //replace bs5
+  .navbar-collapse_{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
   .main-logo {
     width: 80px;
   }
@@ -266,3 +272,14 @@
   }
 }
 /* ============ small devices .end// ============ */
+@media screen and (min-width:1200px) {
+  .navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+}
+}
+// @media screen and (min-width:992px) {
+//   .navbar-expand-lg .navbar-collapse {
+//     display: none!important;
+// }
+// }
+ 
