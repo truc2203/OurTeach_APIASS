@@ -13,17 +13,16 @@
       @include bgImg;
       height: 25vw;
       }
-      .col-5{
+      .col-lg-5{
         box-shadow: 0 30px 30px -10px #00000033;
         z-index: 3;
         background-color: $color-white;
         height: 100%;
     }
-    .col-7{
+    .col-lg-7{
       z-index: 3;
     }
   .contact-form {
-    margin: 0 -8px;
     h2{
         @include txtStyle($color-dark,$fs-4,$fw-3)
     }
@@ -40,11 +39,27 @@
         top: 14px;
         left: 24px;
     }
-    .i-email{
-        left: 56%;
-    }
     .btn-form{
         padding: $pd-3 0;
+        .btn-primary{
+          width: 100%;
+        }
     }
   }
+}
+
+@media screen and (min-width:768px) {
+  .contact{
+    .contact-form{
+      .d-flex{
+        flex-direction: row !important;
+      }
+      .btn-form{
+        .btn-primary{
+          width: 150px;
+        }
+      }
+    }
+  }
+  
 }

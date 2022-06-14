@@ -1,14 +1,15 @@
 .wrapper{
     .wrapper-cover-top{
         padding-bottom: $pd-cover;
+
     }
     .wrap-left-content{
-        margin: 200px 0;
+        margin: 2vw 0;
         & h5{
             @include txtStyle($color-pri,$fs-6,$fw-2)
         }
         & h1{
-            @include txtStyle($color-dark,$fs-5,$fw-3)
+            @include txtStyle($color-dark,$fs-10,$fw-3)
         }
     }
     .wrapper-wave-top-left{
@@ -20,7 +21,7 @@
     .wrapper-cover-bottom{
         padding-top: $pd-10;
         background-color: $color-violer;
-        & .col-3{
+        & .col-lg-3{
             z-index: 3;
         }
     }
@@ -32,3 +33,26 @@
     }
     
 }
+
+@media screen and (min-width:1200px){
+    .wrapper .wrap-left-content{
+
+        h1{
+            font-size: $fs-5;
+        }
+    }
+}
+@media screen and (min-width:992px) {
+    .flex-lg-col{
+      @include flexRow
+    }
+    .wrapper .wrap-left-content{
+        margin: 13vw 0;
+    }
+  }
+  
+  @media screen and (min-width:768px) {
+    .flex-md-col{
+      @include flexCol
+    }
+  }

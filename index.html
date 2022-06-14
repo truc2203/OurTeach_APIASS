@@ -21,6 +21,8 @@
 </head>
 
 <body>
+  <!-----------------  Menu bar -------------------------------->
+  <div class="MenuDropdownBar"></div>
   <!-----------------  Left Wave Background  ------------------>
   <div class="bg-header-wave position-absolute">
     <img src="./img/yellow_top_wave_01.png" alt="" />
@@ -303,16 +305,16 @@
       <div class="wrapper-cover-top position-relative">
         <div class="container">
           <div class="wrapprer-containt-top">
-            <div class="d-flex h-100">
-              <div class="col-6 wrap-left-content">
+            <div class="d-flex h-100 flex-column flex-lg-row">
+              <div class="col-lg-6 col-12  wrap-left-content">
                 <div>
                   <h5>ABOUT US</h5>
                   <h1>The language teaching experts</h1>
                 </div>
               </div>
-              <div class="col-6">
+              <div class="col-lg-6 col-12">
                 <div>
-                  <img class="w-100" src="./img/hero_team.png" alt="">
+                  <img class="w-100 wrapper-bg" src="./img/hero_team.png" alt="">
                 </div>
               </div>
             </div>
@@ -326,7 +328,7 @@
         <div class="container">
           <div class="wrapper-containt-bottom">
             <div class="d-flex flex-wrap">
-              <div class="col-3 px-3 pb-5">
+              <div class="col-12 col-sm-6 col-lg-3 col-sm-6 col-12 px-sm-4 px-3 pb-5">
                 <div class="cards">
                   <div class="card-view">
                     <div class="avatar">
@@ -340,7 +342,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-3 px-3 pb-5 ">
+              <div class="col-12 col-sm-6 col-lg-3 px-3 pb-5 ">
                 <div class="cards">
                   <div class="card-view">
                     <div class="avatar">
@@ -354,7 +356,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-3 px-3 pb-5">
+              <div class="col-12 col-sm-6 col-lg-3 px-3 pb-5">
                 <div class="cards">
                   <div class="card-view">
                     <div class="avatar">
@@ -368,7 +370,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-3 px-3 pb-5">
+              <div class="col-12 col-sm-6 col-lg-3 px-3 pb-5">
                 <div class="cards">
                   <div class="card-view">
                     <div class="avatar">
@@ -382,7 +384,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-3 px-3">
+              <div class="col-12 col-sm-6 col-lg-3 px-3 pb-5">
                 <div class="cards">
                   <div class="card-view">
                     <div class="avatar">
@@ -396,7 +398,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-3 px-3">
+              <div class="col-12 col-sm-6 col-lg-3 px-3 pb-5">
                 <div class="cards">
                   <div class="card-view">
                     <div class="avatar">
@@ -410,7 +412,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-3 px-3">
+              <div class="col-12 col-sm-6 col-lg-3 px-3 pb-5">
                 <div class="cards">
                   <div class="card-view">
                     <div class="avatar">
@@ -424,7 +426,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-3 px-3">
+              <div class="col-12 col-sm-6 col-lg-3 px-3">
                 <div class="cards">
                   <div class="card-view">
                     <div class="avatar">
@@ -454,22 +456,26 @@
     <div class="contact-cover position-relative">
       <div class="container">
         <div class="contact-cell">
-          <div class="d-flex">
-            <div class="col-7 px-4">
+          <div class="d-flex flex-column flex-lg-row">
+            <div class="col-lg-7 col-12 px-4">
               <div class="contact-inner px-4">
                 <img class="w-100" src="./img/conatct_inner.png" alt="">
               </div>
             </div>
-            <div class="col-5 px-3 rounded-3">
+            <div class="col-lg-5 col-12 px-3 rounded-3">
               <div class="contact-form px-3">
                 <h2 class="pt-4 pb-5">Find Your Course</h2>
                 <div class="form-info">
                   <form class="contact-form" action="">
-                    <div class="d-flex pb-3 position-relative">
-                      <input class="w-50" type="text" placeholder="Name">
-                      <i class="fa-solid fa-user position-absolute"></i>
-                      <input class="w-50" type="text" placeholder="Email">
-                      <i class="fa-solid fa-envelope position-absolute i-email"></i>
+                    <div class="d-flex pb-3 position-relative flex-column">
+                      <div class="col-md-6 col-12 position-relative pe-md-2 pb-3 pb-md-0">
+                        <input class="w-100" type="text" placeholder="Name">
+                        <i class="fa-solid fa-user position-absolute"></i>
+                      </div>
+                      <div class="col-md-6 col-12 position-relative ps-md-2">
+                        <input class="w-100" type="text" placeholder="Email">
+                        <i class="fa-solid fa-envelope position-absolute "></i>
+                      </div>
                     </div>
                     <div class="d-flex pb-3 position-relative">
                       <!-- <input class="w-100" type="text" placeholder="English"> -->
@@ -505,8 +511,8 @@
   <footer class="footer position-relative">
     <div class="footer-cover ">
       <div class="container">
-        <div class="d-flex">
-          <div class="col-3">
+        <div class="d-flex flex-wrap">
+          <div class="col-lg-3 col-sm-6 col-12 pb-5 pb-sm-0 px-sm-4 ps-lg-0">
             <div class="footer-info">
               <h4 class="mb-4">Contact Us</h4>
               <div class="mb-2">
@@ -526,7 +532,7 @@
               </div>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-lg-3 col-sm-6 col-12 pb-5 pb-sm-0 px-sm-4">
             <div class="footer-info">
               <h4 class="mb-4">Quick Links</h4>
               <div class="info-menu pt-0">
@@ -543,7 +549,7 @@
               </div>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-lg-3 col-sm-6 col-12 pb-5 pb-sm-0 px-sm-4">
             <div class="footer-info">
               <h4 class="mb-4">Abouts</h4>
               <div class="info-menu pt-0">
@@ -560,14 +566,14 @@
               </div>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-lg-3 col-sm-6 col-12 pb-5 pb-sm-0 px-sm-4 pe-lg-0">
             <div class="footer-info">
               <h4 class="mb-5">NewLetters</h4>
               <div class="mb-2">
-                <input type="email" placeholder="Your mail" class="input-ft"></input>
+                <input type="email" placeholder="Your mail" class="w-100 input-ft"></input>
               </div>
               <div>
-                <button class="btn-ft">SUBSCRICE</button>
+                <button class="w-100 btn-ft">SUBSCRICE</button>
               </div>
             </div>
           </div>

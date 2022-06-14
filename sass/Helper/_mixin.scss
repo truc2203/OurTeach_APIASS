@@ -67,3 +67,11 @@
     border-radius: $fs-bd;
     overflow: hidden;
 }
+
+//Replace Flex Boostrap
+@mixin flexRow {
+    flex-direction: row;
+}
+@mixin flexCol {
+    flex-direction: column;
+}

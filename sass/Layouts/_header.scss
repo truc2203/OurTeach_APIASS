@@ -1,11 +1,18 @@
 //Main container
-
+.MenuDropdownBar {
+  position: fixed;
+  width: 100%;
+  height: 48px;
+  background: $color-white;
+  z-index: 99;
+  display: block;
+}
 .container {
-  padding: 0;
+  padding: 0 $pd-10;
   max-width: 1200px;
   margin: auto;
 }
-.mainHeader{
+.mainHeader {
   position: sticky;
   z-index: 1030;
   top: 0;
@@ -13,6 +20,7 @@
   right: 0;
 }
 .sticky {
+  display: none;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -29,8 +37,8 @@
 .headerInner {
   width: 100%;
   //replace bs5
-  .navbar-collapse_{
-    display: flex;
+  .navbar-collapse_ {
+    display: none;
     align-items: center;
     flex-grow: 1;
   }
@@ -154,7 +162,7 @@
       }
     }
   }
-  .drop-before::before{
+  .drop-before::before {
     content: "";
     position: absolute;
     width: 6px;
@@ -162,7 +170,7 @@
     background-color: $color-pri;
     top: 15%;
     right: 10px;
-    border-radius: 50%
+    border-radius: 50%;
   }
   .show-menu-shop {
     @include showMenuNavbar($color-white);
@@ -261,9 +269,20 @@
     display: block;
   }
 }
-/* ============ desktop view .end// ============ */
-
-/* ============ small devices ============ */
+@media screen and (min-width: 1200px) {
+  .headerInner .navbar-collapse_ {
+    display: flex;
+  }
+  .MenuDropdownBar {
+    display: none;
+  }
+  .sticky {
+    display: block;
+  }
+  .container {
+    padding: 0 0;
+  }
+}
 @media (max-width: 991px) {
   .dropdown-menu .dropdown-menu {
     margin-left: 0.7rem;
@@ -271,15 +290,3 @@
     margin-bottom: 0.5rem;
   }
 }
-/* ============ small devices .end// ============ */
-@media screen and (min-width:1200px) {
-  .navbar-expand-lg .navbar-collapse {
-    display: flex!important;
-}
-}
-// @media screen and (min-width:992px) {
-//   .navbar-expand-lg .navbar-collapse {
-//     display: none!important;
-// }
-// }
- 

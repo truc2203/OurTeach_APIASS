@@ -190,16 +190,15 @@ html li, body li {
   padding-bottom: 60px;
 }
 
-.footer .col-3 {
-  padding: 0 36px;
+.footer .col-lg-3 {
   z-index: 3;
 }
 
-.footer .col-3:first-child {
+.footer .col-lg-3:first-child {
   padding-left: 0;
 }
 
-.footer .col-3:last-child {
+.footer .col-lg-3:last-child {
   padding-right: 0;
 }
 
@@ -238,9 +237,7 @@ html li, body li {
 }
 
 .footer .footer-info .input-ft {
-  width: 90%;
   text-align: center;
-  margin: 0 8px;
   padding: 12px 12px 12px 36px;
   border-radius: 24px;
   border: 1px solid #b6258f;
@@ -278,7 +275,6 @@ html li, body li {
 }
 
 .footer .footer-info .btn-ft {
-  width: 90%;
   letter-spacing: 2px;
   padding: 14px 55px;
   -webkit-box-shadow: 0 0 0 48px #ffffff inset;
@@ -315,11 +311,21 @@ html li, body li {
   width: 100%;
   position: absolute;
   bottom: -1px;
-  height: 34vw;
+  height: 35vw;
+  bottom: -15px;
+}
+
+.MenuDropdownBar {
+  position: fixed;
+  width: 100%;
+  height: 48px;
+  background: #ffffff;
+  z-index: 99;
+  display: block;
 }
 
 .container {
-  padding: 0;
+  padding: 0 30px;
   max-width: 1200px;
   margin: auto;
 }
@@ -334,6 +340,7 @@ html li, body li {
 }
 
 .sticky {
+  display: none;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -357,9 +364,7 @@ html li, body li {
 }
 
 .headerInner .navbar-collapse_ {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -742,8 +747,23 @@ html li, body li {
   }
 }
 
-/* ============ desktop view .end// ============ */
-/* ============ small devices ============ */
+@media screen and (min-width: 1200px) {
+  .headerInner .navbar-collapse_ {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .MenuDropdownBar {
+    display: none;
+  }
+  .sticky {
+    display: block;
+  }
+  .container {
+    padding: 0 0;
+  }
+}
+
 @media (max-width: 991px) {
   .dropdown-menu .dropdown-menu {
     margin-left: 0.7rem;
@@ -752,21 +772,12 @@ html li, body li {
   }
 }
 
-/* ============ small devices .end// ============ */
-@media screen and (min-width: 1200px) {
-  .navbar-expand-lg .navbar-collapse {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-  }
-}
-
 .wrapper .wrapper-cover-top {
   padding-bottom: 60px;
 }
 
 .wrapper .wrap-left-content {
-  margin: 200px 0;
+  margin: 2vw 0;
 }
 
 .wrapper .wrap-left-content h5 {
@@ -777,7 +788,7 @@ html li, body li {
 
 .wrapper .wrap-left-content h1 {
   color: #181818;
-  font-size: 58px;
+  font-size: 48px;
   font-weight: 700;
 }
 
@@ -797,7 +808,7 @@ html li, body li {
   background-color: #dcd1f3;
 }
 
-.wrapper .wrapper-cover-bottom .col-3 {
+.wrapper .wrapper-cover-bottom .col-lg-3 {
   z-index: 3;
 }
 
@@ -810,6 +821,33 @@ html li, body li {
   position: absolute;
   bottom: -1px;
   height: 24.8vw;
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper .wrap-left-content h1 {
+    font-size: 58px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .flex-lg-col {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .wrapper .wrap-left-content {
+    margin: 13vw 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .flex-md-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .contact .contact-cover {
@@ -834,7 +872,7 @@ html li, body li {
   height: 25vw;
 }
 
-.contact .col-5 {
+.contact .col-lg-5 {
   -webkit-box-shadow: 0 30px 30px -10px #00000033;
           box-shadow: 0 30px 30px -10px #00000033;
   z-index: 3;
@@ -842,12 +880,8 @@ html li, body li {
   height: 100%;
 }
 
-.contact .col-7 {
+.contact .col-lg-7 {
   z-index: 3;
-}
-
-.contact .contact-form {
-  margin: 0 -8px;
 }
 
 .contact .contact-form h2 {
@@ -859,7 +893,6 @@ html li, body li {
 .contact .contact-form input,
 .contact .contact-form textarea,
 .contact .contact-form select {
-  margin: 0 8px;
   padding: 12px 12px 12px 36px;
   border-radius: 24px;
   border: 1px solid #ececec;
@@ -888,11 +921,23 @@ html li, body li {
   left: 24px;
 }
 
-.contact .contact-form .i-email {
-  left: 56%;
-}
-
 .contact .contact-form .btn-form {
   padding: 36px 0;
+}
+
+.contact .contact-form .btn-form .btn-primary {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .contact .contact-form .d-flex {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+  .contact .contact-form .btn-form .btn-primary {
+    width: 150px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

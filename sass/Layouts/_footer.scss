@@ -4,8 +4,8 @@
   .container {
     padding-bottom: 60px;
   }
-  .col-3 {
-    padding: 0 $pd-3;
+  .col-lg-3 {
+
     z-index: 3;
     &:first-child{
       padding-left: 0;
@@ -36,7 +36,6 @@
     }
 
     .input-ft {
-      width: 90%;
       text-align: center;
       @include inputForm($color-dark, $fs-1, $fw-4, $color-bgft, #b6258f);
       padding: 14px 12px 14px 12px; //replace minxin
@@ -50,7 +49,6 @@
       }
     }
     .btn-ft {
-      width: 90%;
       letter-spacing: 2px;
       @include btnPri(14px, 55px, $color-white, 55px);
       padding: 15px 12px 15px 12px; //replace mixin
@@ -68,6 +66,7 @@
   .footer-bottom-wave {
     background-image: url("../../img/footer_background.jpg");
     @include bgImg;
-    height: 34vw;
+    height: 35vw;
+    bottom: -15px;
   }
 }
