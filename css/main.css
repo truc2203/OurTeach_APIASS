@@ -315,15 +315,6 @@ html li, body li {
   bottom: -15px;
 }
 
-.MenuDropdownBar {
-  position: fixed;
-  width: 100%;
-  height: 48px;
-  background: #ffffff;
-  z-index: 99;
-  display: block;
-}
-
 .container {
   padding: 0 30px;
   max-width: 1200px;
@@ -380,6 +371,7 @@ html li, body li {
 .headerInner .navbar-brand {
   padding: 0;
   margin: 0;
+  visibility: hidden;
 }
 
 .headerInner .nav-item:hover .show-menu-home,
@@ -753,8 +745,8 @@ html li, body li {
     display: -ms-flexbox;
     display: flex;
   }
-  .MenuDropdownBar {
-    display: none;
+  .headerInner .navbar-brand {
+    visibility: visible;
   }
   .sticky {
     display: block;
@@ -938,6 +930,93 @@ html li, body li {
   }
   .contact .contact-form .btn-form .btn-primary {
     width: 150px;
+  }
+}
+
+.slidebar {
+  position: fixed;
+  width: 100%;
+  height: 48px;
+  background: #ffffff;
+  z-index: 1080;
+  display: block;
+  -webkit-box-shadow: 0 3px 6px 0 #0000000d;
+          box-shadow: 0 3px 6px 0 #0000000d;
+}
+
+.slidebar .slide-dropdown-icon button {
+  background: transparent;
+  border: none;
+}
+
+.slidebar .slide-dropdown-icon button i {
+  color: #b61984;
+  font-size: 24px;
+  font-weight: 13px;
+  top: 12px;
+}
+
+.slidebar .slide-dropdown-icon img {
+  height: 48px;
+  left: 36px;
+}
+
+.slidebar .slide-dropdown-menu {
+  width: 300px;
+  height: 100vh;
+  background: #ffffff;
+  -webkit-box-shadow: 0 3px 6px 0 #0000000d;
+          box-shadow: 0 3px 6px 0 #0000000d;
+  top: 0;
+  left: -600px;
+}
+
+.slidebar .slide-dropdown-menu .slide-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 0;
+}
+
+.slidebar .slide-dropdown-menu .slide-menu ul a {
+  color: #181818;
+  font-size: 13px;
+  font-weight: 400;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.slidebar .slide-dropdown-menu .slide-menu ul a:hover {
+  color: #b61984;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.slidebar .slide-contact .span-primary {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.slidebar .slide-contact .span-primary:hover {
+  color: #b61984;
+  -webkit-box-shadow: 0 0 0 1px #b61984 inset;
+          box-shadow: 0 0 0 1px #b61984 inset;
+  background-color: #ffffff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 1200px) {
+  .slidebar {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -21,8 +21,53 @@
 </head>
 
 <body>
-  <!-----------------  Menu bar -------------------------------->
-  <div class="MenuDropdownBar"></div>
+  <!-----------------  Slidebar -------------------------------->
+  <div class="slidebar ">
+    <div class="container">
+      <div class="slide-dropdown-icon d-flex  position-relative">
+        <button onclick="showMenu()"> <i id="icon-close" class="fa-solid fa-bars me-2 position-absolute"></i></button>
+        <div class="">
+          <img class="position-absolute" src="./img/crest.png" alt="">
+        </div>
+      </div>
+      <div id="show" class="slide-dropdown-menu position-absolute px-4">
+        <div class="d-flex flex-column align-items-center">
+          <div class="slide-logo mb-5">
+            <img src="./img/crest.png" alt="">
+          </div>
+          <div class="slide-menu">
+            <ul>
+              <li class="py-2"><a href="">Home</a></li>
+              <li class="py-2"><a href="">About</a></li>
+              <li class="py-2"><a href="">Course</a></li>
+              <li class="py-2"><a href="">Blog</a></li>
+              <li class="py-2"><a href="">Shop</a></li>
+              <li class="py-2"><a href="">Element</a></li>
+            </ul>
+          </div>
+          <div class="slide-contact d-flex flex-column align-items-center">
+            <a class="phone-icon pb-4" href="">
+              <span class="span-primary"><i class="fa-solid fa-phone"></i>(+1)555 234-8765</span>
+            </a>
+            <div class="d-flex pb-4">
+              <a class="px-1" href="">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a class="px-1" href="">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a class="px-1" href="">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+              <a class="px-1" href="">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+  </div>
   <!-----------------  Left Wave Background  ------------------>
   <div class="bg-header-wave position-absolute">
     <img src="./img/yellow_top_wave_01.png" alt="" />
@@ -384,7 +429,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-sm-6 col-lg-3 px-3 pb-5 pb-sm-0">
+              <div class="col-12 col-sm-6 col-lg-3 px-3 pb-5 pb-lg-0">
                 <div class="cards">
                   <div class="card-view">
                     <div class="avatar">
@@ -398,7 +443,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-sm-6 col-lg-3 px-3 pb-5 pb-sm-0">
+              <div class="col-12 col-sm-6 col-lg-3 px-3 pb-5 pb-lg-0">
                 <div class="cards">
                   <div class="card-view">
                     <div class="avatar">
@@ -512,7 +557,7 @@
     <div class="footer-cover ">
       <div class="container">
         <div class="d-flex flex-wrap">
-          <div class="col-lg-3 col-sm-6 col-12 pb-5 pb-sm-0 px-sm-4 ps-lg-0">
+          <div class="col-lg-3 col-sm-6 col-12 pb-5 pb-lg-0 px-sm-4 ps-lg-0">
             <div class="footer-info">
               <h4 class="mb-4">Contact Us</h4>
               <div class="mb-2">
@@ -532,7 +577,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6 col-12 pb-5 pb-sm-0 px-sm-4">
+          <div class="col-lg-3 col-sm-6 col-12 pb-5 pb-lg-0 px-sm-4">
             <div class="footer-info">
               <h4 class="mb-4">Quick Links</h4>
               <div class="info-menu pt-0">
@@ -549,7 +594,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6 col-12 pb-5 pb-sm-0 px-sm-4">
+          <div class="col-lg-3 col-sm-6 col-12 pb-5 pb-lg-0 px-sm-4">
             <div class="footer-info">
               <h4 class="mb-4">Abouts</h4>
               <div class="info-menu pt-0">
@@ -566,7 +611,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6 col-12 pb-5 pb-sm-0 px-sm-4 pe-lg-0">
+          <div class="col-lg-3 col-sm-6 col-12 pb-5 pb-lg-0 px-sm-4 pe-lg-0">
             <div class="footer-info">
               <h4 class="mb-5">NewLetters</h4>
               <div class="mb-2">
@@ -593,6 +638,7 @@
     crossorigin="anonymous"></script>
   <script src="./Js/WindowScroll.js"></script>
   <script src="./Js/DropdownMenu.js"></script>
+  <script src="./Js/showMenu.js"></script>
 </body>
 
 </html>
