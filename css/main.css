@@ -428,8 +428,8 @@ html li, body li {
   position: absolute;
   width: 220px;
   background-color: #ffffff;
-  -webkit-box-shadow: 0 0px 6px 3px #0000000d;
-          box-shadow: 0 0px 6px 3px #0000000d;
+  -webkit-box-shadow: 0 3px 6px 0 #0000000d;
+          box-shadow: 0 3px 6px 0 #0000000d;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   -webkit-animation: showMenu 0.3s ease-in;
@@ -865,8 +865,8 @@ html li, body li {
 }
 
 .contact .col-lg-5 {
-  -webkit-box-shadow: 0 30px 30px -10px #00000033;
-          box-shadow: 0 30px 30px -10px #00000033;
+  -webkit-box-shadow: 0 3px 6px 0 #0000000d;
+          box-shadow: 0 3px 6px 0 #0000000d;
   z-index: 3;
   background-color: #ffffff;
   height: 100%;
@@ -897,8 +897,8 @@ html li, body li {
 .contact .contact-form input:focus-visible,
 .contact .contact-form textarea:focus-visible,
 .contact .contact-form select:focus-visible {
-  -webkit-box-shadow: 0 0 4px 0 #0000001a;
-          box-shadow: 0 0 4px 0 #0000001a;
+  -webkit-box-shadow: 0 3px 6px 0 #0000000d;
+          box-shadow: 0 3px 6px 0 #0000000d;
   border: 1px solid #0000004d;
   outline: 0;
   -webkit-transition: all 0.5s;

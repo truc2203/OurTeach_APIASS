@@ -61,17 +61,18 @@
 @mixin strans {
     transition: all 0.2s;
 }
-
 @mixin cards($color-bg,$fs-bd) {
     background-color: $color-bg;
     border-radius: $fs-bd;
     overflow: hidden;
 }
-
 //Replace Flex Boostrap
 @mixin flexRow {
     flex-direction: row;
 }
 @mixin flexCol {
     flex-direction: column;
+}
+@mixin boxShadow {
+    box-shadow: 0 3px 6px 0 #0000000d;
 }

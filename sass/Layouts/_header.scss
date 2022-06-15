@@ -19,7 +19,7 @@
   z-index: 999;
   background-color: $color-white;
   padding: $pd-9;
-  box-shadow: 0 3px 6px 0 #0000000d;
+  @include boxShadow;
 }
 .bg-header-wave {
   top: 0;
@@ -81,7 +81,7 @@
       position: absolute;
       width: 220px;
       background-color: $color-white;
-      box-shadow: 0 0px 6px 3px #0000000d;
+      @include boxShadow;
       transform: translateX(-50%);
       animation: showMenu 0.3s ease-in;
       top: 55px;
@@ -245,7 +245,7 @@
     position: absolute;
     left: 108%;
     top: -15px;
-    box-shadow: 0 3px 6px 0 #0000000d;
+    @include boxShadow;
     animation: showMenu 0.5s ease-in;
     &::before {
       content: "";

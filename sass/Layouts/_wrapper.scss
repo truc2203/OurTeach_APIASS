@@ -1,58 +1,53 @@
-.wrapper{
-    .wrapper-cover-top{
-        padding-bottom: $pd-cover;
-
+.wrapper {
+  .wrapper-cover-top {
+    padding-bottom: $pd-cover;
+  }
+  .wrap-left-content {
+    margin: 2vw 0;
+    & h5 {
+      @include txtStyle($color-pri, $fs-6, $fw-2);
     }
-    .wrap-left-content{
-        margin: 2vw 0;
-        & h5{
-            @include txtStyle($color-pri,$fs-6,$fw-2)
-        }
-        & h1{
-            @include txtStyle($color-dark,$fs-10,$fw-3)
-        }
-    }
-    .wrapper-wave-top-left{
-        background-image: url('../../img/Violet_top_left_wave.png');
-        @include bgImg;
-        height: 16.25vw;
-
-    }
-    .wrapper-cover-bottom{
-        padding-top: $pd-10;
-        background-color: $color-violer;
-        & .col-lg-3{
-            z-index: 3;
-        }
-    }
-    .wrapper-wave-bottom-right{
-        background-image: url('../../img/Wave_White_bottom_right_shape_01.png');
-        @include bgImg;
-        height: 24.8vw;
-   
-    }
-    
-}
-
-@media screen and (min-width:1200px){
-    .wrapper .wrap-left-content{
-
-        h1{
-            font-size: $fs-5;
-        }
-    }
-}
-@media screen and (min-width:992px) {
-    .flex-lg-col{
-      @include flexRow
-    }
-    .wrapper .wrap-left-content{
-        margin: 13vw 0;
+    & h1 {
+      @include txtStyle($color-dark, $fs-10, $fw-3);
     }
   }
-  
-  @media screen and (min-width:768px) {
-    .flex-md-col{
-      @include flexCol
+  .wrapper-wave-top-left {
+    background-image: url("../../img/Violet_top_left_wave.png");
+    @include bgImg;
+    height: 16.25vw;
+  }
+  .wrapper-cover-bottom {
+    padding-top: $pd-10;
+    background-color: $color-violer;
+    & .col-lg-3 {
+      z-index: 3;
     }
   }
+  .wrapper-wave-bottom-right {
+    background-image: url("../../img/Wave_White_bottom_right_shape_01.png");
+    @include bgImg;
+    height: 24.8vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper .wrap-left-content {
+    h1 {
+      font-size: $fs-5;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .flex-lg-col {
+    @include flexRow;
+  }
+  .wrapper .wrap-left-content {
+    margin: 13vw 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .flex-md-col {
+    @include flexCol;
+  }
+}

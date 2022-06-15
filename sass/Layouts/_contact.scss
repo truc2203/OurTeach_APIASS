@@ -14,7 +14,7 @@
       height: 25vw;
       }
       .col-lg-5{
-        box-shadow: 0 30px 30px -10px #00000033;
+        @include boxShadow;
         z-index: 3;
         background-color: $color-white;
         height: 100%;
