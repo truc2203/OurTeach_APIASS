@@ -43,6 +43,9 @@
             @include strans;
           }
         }
+        .menu-highlight{
+          font-weight: $fw-2;
+        }
       }
 
     }
@@ -52,6 +55,12 @@
       @include txtStyle($color-white,$fs-1,$fw-4);
       &:hover{
         @include btnHover($color-pri,$color-pri,$color-white)
+      }
+    }
+    .d-flex{
+      a:hover{
+        color: $color-pri;
+        @include strans
       }
     }
   }

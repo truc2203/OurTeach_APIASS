@@ -999,6 +999,10 @@ html li, body li {
   transition: all 0.2s;
 }
 
+.slidebar .slide-dropdown-menu .slide-menu ul .menu-highlight {
+  font-weight: 600;
+}
+
 .slidebar .slide-contact .span-primary {
   color: #ffffff;
   font-size: 13px;
@@ -1012,6 +1016,12 @@ html li, body li {
   background-color: #ffffff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.slidebar .slide-contact .d-flex a:hover {
+  color: #b61984;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 @media screen and (min-width: 1200px) {
