@@ -1,9 +1,9 @@
 window.onscroll = function(){
     wdscroll()
 }
-var navbar = document.getElementById("navbar")
-var logo = document.getElementById("logo")
-function wdscroll(){
+const navbar = document.getElementById("navbar")
+const logo = document.getElementById("logo")
+const wdscroll = () => {
     if(window.pageYOffset >= 1)
     {
         navbar.classList.add("sticky")

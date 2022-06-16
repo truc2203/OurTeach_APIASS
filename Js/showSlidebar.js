@@ -1,4 +1,4 @@
-function showMenu() {
+const showMenu = () => {
   const showIcon = document.getElementById("icon-close");
   const showMenu = document.getElementById("show");
   if (showMenu.style.left === "-500px") {
