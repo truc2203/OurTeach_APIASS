@@ -3,10 +3,10 @@ init()
 
 function init(){
     apiGetList().then(function(reponse){
-        var lists = reponse.data
+        let lists = reponse.data
         for(let i in lists)
         {
-            var list = lists[i]
+            let list = lists[i]
             lists[i] = new Lists(
                 list.account,
                 list.userName,
