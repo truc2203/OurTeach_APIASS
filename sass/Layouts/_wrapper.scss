@@ -51,3 +51,11 @@
     @include flexCol;
   }
 }
+
+@media screen and (min-width:576px) and (max-width:991px) {
+  .wrapper{
+    .wrapper-bg{
+      width: 576px !important;
+    }
+  }
+}

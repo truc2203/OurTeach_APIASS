@@ -842,6 +842,12 @@ html li, body li {
   }
 }
 
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  .wrapper .wrapper-bg {
+    width: 576px !important;
+  }
+}
+
 .contact .contact-cover {
   padding-top: 60px;
 }
@@ -930,6 +936,12 @@ html li, body li {
   }
   .contact .contact-form .btn-form .btn-primary {
     width: 150px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  .contact .contact-bg {
+    width: 576px !important;
   }
 }
 
