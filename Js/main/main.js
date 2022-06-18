@@ -40,12 +40,13 @@ const display = (lists) => {
             <img src="${list.avatar}" width="70px" height="70px" />
         </td>
         <td>
-            <button class="btn btn-primary" 
+            <button class="btn btn-primary sp-noti" 
+             style="display: inline;"
              data-toggle="modal"
              data-target="#myModal" 
              data-type="update" 
-             data-id="${list.id}">Update</button>
-            <button class="btn btn-danger" data-type="delete" data-id="${list.id}">Delete</button>
+             data-id="${list.id}">Cập nhật</button>
+            <button class="btn btn-danger sp-noti" style="display: inline;" data-type="delete" data-id="${list.id}">Xóa</button>
         </td>
     </tr>
     `;
@@ -147,6 +148,7 @@ document.getElementById("tblDanhSach").addEventListener("click", handleAction);
 const delUser = (listId) => {
   apiDelList(listId).then(function () {
     init();
+    resetForm();
   });
 };
 
@@ -172,6 +174,11 @@ const updateUser = () => {
     avatar,
     id
   );
+  let isValid = validation(list)
+  if(!isValid)
+    {
+      return
+    }
   //  console.log(list.id)
   apiUpdateList(list)
     .then(function (result) {
@@ -187,8 +194,8 @@ const updateUser = () => {
 const showDetailUser = (listId) => {
   document.querySelector(".modal-title").innerHTML = "Cập nhật thông tin";
   document.querySelector(".modal-footer").innerHTML = `
-  <button class="btn btn-success" data-type="update">Cập nhật</button>
-  <button class="btn btn-danger" data-dismiss="modal" data-target="#myModal">Huỷ </button>
+  <button class="btn btn-success sp-noti" data-type="update">Cập nhật</button>
+  <button onclick="resetForm()" class="btn btn-danger sp-noti" data-dismiss="modal" data-target="#myModal">Huỷ </button>
   `;
   apiShowDetail(listId)
     .then(function (result) {
