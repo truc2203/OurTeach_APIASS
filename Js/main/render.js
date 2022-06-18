@@ -48,3 +48,4 @@ const webDisplay = (lists) => {
   //DOM
   document.getElementById("webView").innerHTML = web;
 };
+

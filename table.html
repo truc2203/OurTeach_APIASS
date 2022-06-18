@@ -16,7 +16,17 @@
       crossorigin="anonymous"
     />
   </head>
-
+  <style>
+    .sp-noti{
+      background: linear-gradient(330deg, #e5da18 0%, #6a54cc 25%, #9e297f 50%, #7809e8 75%, #e11313 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: block;
+      font-size: 13px;
+      margin-top: 4px;
+      font-weight: 500;
+  }
+  </style>
   <body>
     <div class="container" style="max-width: 100%;">
       <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
@@ -162,6 +172,7 @@
                   class="form-control"
                   placeholder="Nhập vào tài khoản"
                 />
+                <span class="sp-noti" id="accountNoti" ></span>
               </div>
               <div class="form-group">
                 <label>Họ tên</label>
@@ -170,6 +181,7 @@
                   class="form-control"
                   placeholder="Nhập vào họ tên"
                 />
+                <span class="sp-noti" id="userNameNoti" ></span>
               </div>             
               <div class="form-group">
                 <label>Mật khẩu</label>
@@ -178,6 +190,7 @@
                   class="form-control"
                   placeholder="Nhập mật khẩu"
                 />
+                <span class="sp-noti" id="passwordNoti" ></span>
               </div>
               <div class="form-group">
                 <label for="">Email</label>
@@ -186,6 +199,7 @@
                 class="form-control"
                 placeholder="Nhập vào email"
               />
+              <span class="sp-noti" id="emailNoti" ></span>
               </div>
               <div class="form-group">
                 <label for="">Người dùng</label>
@@ -194,6 +208,7 @@
                   <option value="GV">GV</option>
                   <option value="HV">HV</option>
                 </select>
+                <span class="sp-noti" id="typeNoti" ></span>
               <div class="form-group">
                 <label for="">Ngôn ngữ</label>
                 <select id="idLanguage" class="form-select w-100" aria-label="Default select example">
@@ -206,6 +221,7 @@
                   <option value="SPAIN">SPANISH</option>
                   <option value="ITALIA">SWEDEN</option>
                 </select>
+                <span class="sp-noti" id="languageNoti" ></span>
               </div>
               <div class="form-group">
                 <label for="">Mô tả</label>
@@ -214,6 +230,7 @@
                 class="form-control"
                 placeholder="Nhập vào mô tả"
               />
+              <span class="sp-noti" id="descNoti" ></span>
               </div>
               <div class="form-group">
                 <label for="">Ảnh</label>
@@ -222,6 +239,7 @@
                 class="form-control"
                 placeholder="Chọn ảnh đại diện"
               />
+              <span class="sp-noti" id="avatarNoti" ></span>
               </div>
             </div>
             <!-- Modal footer -->
@@ -258,8 +276,10 @@
     <script src="https://code.highcharts.com/modules/series-label.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./Js/api.js"></script>
-    <script src="./Js/list.js"></script>
-    <script src="./Js/main.js"></script>
+    <script src="./Js/main/api.js"></script>
+    <script src="./Js/main/list.js"></script>
+    <script src="./Js/main/resetForm.js"></script>
+    <script src="./Js//main/validation.js"></script>
+    <script src="./Js/main/main.js"></script>
   </body>
 </html>
