@@ -43,6 +43,12 @@
             @include strans;
           }
         }
+        .submenu-icon-down{
+          left: 120px;
+          padding-top: 6px;
+          color: $color-dark;
+          font-size: $fs-1;
+        }
         .menu-highlight{
           font-weight: $fw-2;
         }

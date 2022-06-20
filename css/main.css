@@ -999,6 +999,13 @@ html li, body li {
   transition: all 0.2s;
 }
 
+.slidebar .slide-dropdown-menu .slide-menu ul .submenu-icon-down {
+  left: 120px;
+  padding-top: 6px;
+  color: #181818;
+  font-size: 13px;
+}
+
 .slidebar .slide-dropdown-menu .slide-menu ul .menu-highlight {
   font-weight: 600;
 }
