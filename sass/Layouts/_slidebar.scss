@@ -1,4 +1,7 @@
 //Dropdown Bar
+#subMenu {
+  display: none;
+}
 .slidebar {
   position: fixed;
   width: 100%;
@@ -35,6 +38,21 @@
         flex-direction: column;
         align-items: center;
         padding-left: 0;
+        .submenu-sec:hover .show-submenu-sec {
+          display: flex;
+        }
+        .show-submenu-sec {
+          display: none;
+          a {
+            @include txtStyle($color-dark, $fs-0, $fw-1);
+          }
+          .submenu-thr:hover .show-submenu-thr {
+            display: flex;
+          }
+          .show-submenu-thr {
+            display: none;
+          }
+        }
         a {
           @include txtStyle($color-dark, $fs-1, $fw-1);
           @include strans;
@@ -43,30 +61,34 @@
             @include strans;
           }
         }
-        .submenu-icon-down{
+        .submenu-icon-down {
           left: 120px;
           padding-top: 6px;
           color: $color-dark;
           font-size: $fs-1;
+          @include strans;
+          &:hover {
+            transform: rotate(-180deg);
+            @include strans;
+          }
         }
-        .menu-highlight{
+        .menu-highlight {
           font-weight: $fw-2;
         }
       }
-
     }
   }
-  .slide-contact{
-    .span-primary{
-      @include txtStyle($color-white,$fs-1,$fw-4);
-      &:hover{
-        @include btnHover($color-pri,$color-pri,$color-white)
+  .slide-contact {
+    .span-primary {
+      @include txtStyle($color-white, $fs-1, $fw-4);
+      &:hover {
+        @include btnHover($color-pri, $color-pri, $color-white);
       }
     }
-    .d-flex{
-      a:hover{
+    .d-flex {
+      a:hover {
         color: $color-pri;
-        @include strans
+        @include strans;
       }
     }
   }

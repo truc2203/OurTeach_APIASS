@@ -217,12 +217,12 @@ const showDetailUser = (listId) => {
 
 //Tìm kiếm user theo tài khoản
 const handleSearch = (event) => {
-  console.log(event);
+ // console.log(event);
   if (event.key !== "Enter") {
     return;
   }
   let value = event.target.value;
-  console.log(value);
+ // console.log(value);
   apiSearchGetList(value).then(function (result) {
     let lists = result.data;
     for (let i in lists) {
