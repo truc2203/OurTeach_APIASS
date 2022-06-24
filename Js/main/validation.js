@@ -4,7 +4,6 @@ const isRequired = (value) => {
   }
   return true;
 };
-
 const validation = (list) => {
   let isValid = true;
   let namePattern = new RegExp(
@@ -15,11 +14,26 @@ const validation = (list) => {
   );
   let emailPattern = new RegExp("^[A-Za-z0-9._%+-]+@[a-z0-9.-]+[.][a-z]{2,}$");
   let descPatern = new RegExp("^[A-Za-z0-9s].{1,60}$");
+  // Duyệt mảng arrList chứa danh sách toàn bộ account xem có trùng vs account vừa tạo hay không
+  const findAccount = arrList.find((account) => {
+    return account.account === list.account;
+  });
+  // console.log(findAccount)
+  // console.log(arrList)
+
+
   if (!isRequired(list.account)) {
     isValid = false;
     document.getElementById("accountNoti").innerHTML =
       "Tài khoản không được để trống";
-  } else {
+  }
+  else if(findAccount !== undefined)
+  {
+    isValid = false
+    document.getElementById("accountNoti").innerHTML =
+    "Tài khoản đã có người sử dụng";
+  }
+  else {
     document.getElementById("accountNoti").innerHTML = " ";
   }
 

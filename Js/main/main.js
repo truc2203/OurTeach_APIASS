@@ -1,6 +1,6 @@
 //Call API
 init();
-
+const arrList = [] // Lưu toàn bộ danh sách vào 1 mảng toàn cục
 function init() {
   apiGetList().then(function (reponse) {
     let lists = reponse.data;
@@ -17,7 +17,9 @@ function init() {
         list.avatar,
         list.id
       );
+    arrList.push(list)
     }
+    // console.log(arrList)
     display(lists);
   });
 }
@@ -60,9 +62,11 @@ const showModalAdd = () => {
   document.querySelector(".modal-title").innerHTML = "Thêm mới";
   document.querySelector(".modal-footer").innerHTML = `
         <button class="btn btn-info" data-type="add">Thêm</button>
-        <button class="btn btn-danger" data-toggle="modal" data-target="#myModal">Huỷ </button>
+        <button onclick="resetForm()" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Huỷ </button>
     `;
+    document.getElementById("idAccount").disabled = false
 };
+// Mở lại ô input Account
 document.getElementById("btnThem").addEventListener("click", showModalAdd);
 
 // Xử lý chức năng thêm hoặc cập nhật thôn tin người dùng
@@ -124,6 +128,7 @@ const addNewUser = (
     .catch(function (error) {
       console.log(error);
     });
+
 };
 
 const handleAction = (event) => {
@@ -174,7 +179,7 @@ const updateUser = () => {
     avatar,
     id
   );
-  let isValid = validation(list)
+  let isValid = validationUpdate(list)
   if(!isValid)
     {
       return
@@ -201,6 +206,9 @@ const showDetailUser = (listId) => {
     .then(function (result) {
       let list = result.data;
       document.getElementById("idAccount").value = list.account;
+      //Không cho phép thay đổi thông tin account
+      document.getElementById("idAccount").disabled = true
+      
       document.getElementById("idUserName").value = list.userName;
       document.getElementById("idPassword").value = list.password;
       document.getElementById("idEmail").value = list.email;

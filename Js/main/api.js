@@ -1,6 +1,6 @@
 const baseUrl = "https://62aa993a371180affbd7ccc8.mockapi.io/api/Tabula";
 // Lấy danh sách
-const apiGetList = (search) =>
+const apiGetList = () =>
   axios({
     url: baseUrl,
     method: "GET",
