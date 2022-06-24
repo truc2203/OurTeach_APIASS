@@ -29,7 +29,7 @@ const webDisplay = (lists) => {
   for (let i in lists) {
     var list = lists[i];
     if (list.type === "GV") {
-      web += `<div class="col-12 col-sm-6 col-lg-3 col-sm-6 col-12 px-3 pb-5">
+      web += `<div class="col-12 col-sm-6 col-lg-3 px-3 pb-5">
           <div class="cards">
             <div class="card-view">
               <div class="avatar">
