@@ -1,5 +1,3 @@
-
-
 //Main container
 .container {
   padding: 0 $pd-10;
@@ -265,16 +263,14 @@
   }
 }
 @media screen and (min-width: 1200px) {
-  
-  .headerInner
-  {
+  .headerInner {
     .navbar-collapse_ {
       display: flex;
     }
     .navbar-brand {
       visibility: visible;
     }
-  } 
+  }
   .sticky {
     display: block;
   }

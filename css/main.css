@@ -304,7 +304,7 @@ html li, body li {
 }
 
 .footer .footer-bottom-wave {
-  background-image: url("../../img/footer_background.jpg");
+  background-image: url("../img/footer_background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -785,7 +785,7 @@ html li, body li {
 }
 
 .wrapper .wrapper-wave-top-left {
-  background-image: url("../../img/Violet_top_left_wave.png");
+  background-image: url("../img/Violet_top_left_wave.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -805,7 +805,7 @@ html li, body li {
 }
 
 .wrapper .wrapper-wave-bottom-right {
-  background-image: url("../../img/Wave_White_bottom_right_shape_01.png");
+  background-image: url("../img/Wave_White_bottom_right_shape_01.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -854,7 +854,7 @@ html li, body li {
 }
 
 .contact .contact-bottom-wave {
-  background-image: url("../../img/accent_bottom_wave_01.png");
+  background-image: url("../img/accent_bottom_wave_01.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

@@ -27,7 +27,7 @@ function init() {
 const webDisplay = (lists) => {
   let web = "";
   for (let i in lists) {
-    var list = lists[i];
+    let list = lists[i];
     if (list.type === "GV") {
       web += `<div class="col-12 col-sm-6 col-lg-3 px-3 pb-5">
           <div class="cards">
